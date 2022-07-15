@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+  academy-ui: 
+    image: testreact:latest
+    networks:
+      - traefik-public
+    deploy:
+      labels:
+        - "traefik.enable=true"
+        - "traefik.http.routers.testreact.entrypoints=http"
+        - "traefik.http.routers.testreact.rule=Host(`testreact.sistemaagil.net`)"
+        - "traefik.http.middlewares.testreact-https-redirect.redirectscheme.scheme=https"
+        - "traefik.http.routers.testreact.middlewares=testreact-https-redirect"
+        - "traefik.http.routers.testreact-secure.entrypoints=https"
+        - "traefik.http.routers.testreact-secure.rule=Host(`testreact.sistemaagil.net`)"
+        - "traefik.http.routers.testreact-secure.tls=true"
+        - "traefik.http.routers.testreact-secure.tls.certresolver=http"
+        - "traefik.http.routers.testreact-secure.service=testreact"
+        - "traefik.http.services.testreact.loadbalancer.server.port=80"
+        - "traefik.docker.network=traefik-public"
+
+networks:
+  traefik-public:
+    external: true
