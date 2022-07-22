@@ -1,5 +1,5 @@
 build-dev:
-	@ docker build -f devops/Dockerfile -t testreact:latest .
+	@ docker build -f devops/Dockerfile -t academy-front:latest .
 
 deploy:
 	@ docker stack deploy -c devops/stack.yml academy-ui
