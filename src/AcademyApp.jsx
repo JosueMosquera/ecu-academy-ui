@@ -1,9 +1,18 @@
-import PropTypes from 'prop-types';
 
+import Login from '../src/components/Auth/Login'
+import Signup from '../src/components/Auth/Signup'
+import Navbar from '../src/components/Nav'
 const num = 10;
 
 const App = () => {
-	return <h1>{num}</h1>;
+	return (
+        <>
+        <Navbar />
+        <Signup />
+        <Login />
+    </>
+    )
+    
 };
 
 // App.propTypes = {
