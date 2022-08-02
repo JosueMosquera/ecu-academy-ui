@@ -1,11 +1,10 @@
-FROM node:16 AS builder
+FROM node:16 AS builder 
 
 WORKDIR /app
 
 COPY . .
 
 RUN npm run build
-
 
 FROM nginx:1.23.0
 

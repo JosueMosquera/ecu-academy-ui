@@ -5,7 +5,7 @@ const MainWrapper = () => {
     <>
     <div style={{marginTop:10}}>
         <div className='container'>
-        Componente
+        Componente 
         <span>Login</span>
         </div>
         <div className='img-container' style={{display:'flex',alignItems:'center',justifyContent:'center',marginTop:10}}>
