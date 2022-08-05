@@ -1,0 +1,17 @@
+.navbar {
+	background-color: #094892;
+}
+
+.navbar a {
+	color: #fff !important;
+}
+
+.cerrar-sesion-btn {
+}
+
+.cerrar-sesion-btn a {
+	background-color: #a6c111;
+	color: #094892 !important;
+	font-weight: bold;
+	margin: 0 !important;
+}

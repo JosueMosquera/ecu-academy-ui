@@ -1,0 +1,98 @@
+/* login */
+.box-container-login {
+	/* background-color: red; */
+	max-width: 300px;
+}
+
+.img-container-login {
+	display: flex;
+	justify-content: center;
+}
+
+.container-form-login > div {
+	width: 100%;
+}
+
+.box-container-login input {
+	box-sizing: border-box;
+	height: 40px;
+	width: 100%;
+	border: none;
+	margin: 4px 0;
+	padding: 10px;
+}
+
+.box-container-error {
+	padding: 10px 0;
+	text-align: center;
+	background-color: rgb(254, 187, 187);
+	margin: 15px 0;
+}
+
+.box-container-error p {
+	margin: 0;
+	color: rgb(253, 77, 77);
+}
+
+.txt p {
+	margin: 0;
+}
+
+.txt a {
+	text-decoration: none;
+	color: #fff;
+}
+
+.container-form-login .btn-login {
+	display: flex;
+	justify-content: center;
+}
+
+.container-form-login .btn-login button {
+	font-size: 18px;
+	margin: 15px 0;
+	padding: 5px 25px;
+	border-radius: 50px;
+	border: none;
+	font-weight: bold;
+	color: #234e9d;
+}
+
+/* signup */
+.box-container-signup {
+	/* background-color: red; */
+	max-width: 300px;
+}
+
+.img-container-signup {
+	display: flex;
+	justify-content: center;
+}
+
+.container-form-signup > div {
+	width: 100%;
+}
+
+.box-container-signup input {
+	box-sizing: border-box;
+	height: 40px;
+	width: 100%;
+	border: none;
+	margin: 4px 0;
+	padding: 10px;
+}
+
+.container-form-signup .btn-signup {
+	display: flex;
+	justify-content: center;
+}
+
+.container-form-signup .btn-signup button {
+	font-size: 18px;
+	margin: 15px 0;
+	padding: 5px 25px;
+	border-radius: 50px;
+	border: none;
+	font-weight: bold;
+	color: #234e9d;
+}
