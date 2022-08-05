@@ -8,3 +8,6 @@ rm:
 
 stats:
 	@ docker stats --format "table {{.Name}}\t{{.CPUPerc}}\t{{.MemUsage}}" | grep academy
+
+network:
+	@ docker network create --driver overlay  --attachable --scope swarm  tendencias-networks 
