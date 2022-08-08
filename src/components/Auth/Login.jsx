@@ -25,7 +25,7 @@ const Login = () => {
 						<input type='text' placeholder='Pass' />
 					</div>
 					<div className='txt'>
-						<a href='#'>Olvide la contraseña</a>
+						<a href='#'>Olvide la contraseñaa</a>
 					</div>
 					<div className='btn-login'>
 						<button type='submit'>ENTRAR</button>
