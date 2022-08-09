@@ -47,7 +47,7 @@ function  Navegacion()  {
 				</div>
 			</nav>
 		</>
-	);
+	)
 };
 
 export default Navegacion;
