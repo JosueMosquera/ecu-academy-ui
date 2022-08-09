@@ -1,6 +1,6 @@
 import '../css/navBar.css';
 
-const Navbar = () => {
+const Navegacion = () => {
 	return (
 		<>
 			<nav class='navbar navbar-expand-lg'>
@@ -50,4 +50,4 @@ const Navbar = () => {
 	);
 };
 
-export default Navbar;
+export default Navegacion;
