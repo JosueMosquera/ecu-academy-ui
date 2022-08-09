@@ -48,6 +48,6 @@ function  Navegacion()  {
 			</nav>
 		</>
 	)
-};
+}
 
 export default Navegacion;
