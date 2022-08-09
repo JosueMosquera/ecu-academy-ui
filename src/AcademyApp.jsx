@@ -13,9 +13,4 @@ const App = () => {
     )
     
 };
-
-// App.propTypes = {
-// 	title: PropTypes.string.isRequired,
-// };
-
 export default App;
