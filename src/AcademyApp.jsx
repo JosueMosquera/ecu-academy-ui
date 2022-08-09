@@ -8,7 +8,6 @@ class App{
         <Signup/>
         <Login/>
     </>
-
     }
 }
 export default App;
