@@ -11,7 +11,7 @@ const Login = () => {
 				</div>
 
 				<div className='box-container-error'>
-					<p>usuario o contraseña incorrecta</p>
+					<p>Usuario o contraseña incorrecta</p>
 				</div>
 
 				<form action='' className='container-form-login'>
