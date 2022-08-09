@@ -1,6 +1,6 @@
 import '../css/navBar.css';
 
-const Navegacion = () => {
+function  Navegacion()  {
 	return (
 		<>
 			<nav class='navbar navbar-expand-lg'>
