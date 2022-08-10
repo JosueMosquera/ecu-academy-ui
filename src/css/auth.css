@@ -1,6 +1,19 @@
 /* login */
+.loginScreen {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+}
+
+.signupScreen {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+}
+
 .box-container-login {
-	/* background-color: red; */
 	max-width: 300px;
 }
 

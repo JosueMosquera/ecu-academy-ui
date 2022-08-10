@@ -1,17 +1,13 @@
-
-import Login from '../src/components/Auth/Login'
-import Signup from '../src/components/Auth/Signup'
-import Navbar from '../src/components/Nav'
+import Login from '../src/components/Auth/Login';
+import Signup from '../src/components/Auth/Signup';
+import Rutas from '../src/components/rutas';
 
 const App = () => {
 	return (
-        <>
-        <Navbar />
-        <Signup />
-        <Login />
-    </>
-    )
-    
+		<>
+			<Rutas />
+		</>
+	);
 };
 
 // App.propTypes = {

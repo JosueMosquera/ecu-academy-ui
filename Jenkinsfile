@@ -37,6 +37,7 @@ pipeline {
                         script: 'curl -u $SONAR_CREDENTIALS_USR:$SONAR_CREDENTIALS_PSW -s http://sonarqube:9000/api/qualitygates/project_status?projectKey=${PROJEC_NAME} | jq .projectStatus.status',
                         returnStdout: true
                     ).trim().toUpperCase().replaceAll("[\n\r]", "")
+                    
                     if (estatus == '"ERROR"'){
                         throw new Exception("No supera los estandares de calidad..")
 
