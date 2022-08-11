@@ -1,8 +1,9 @@
 import '../../css/auth.css';
+import { useAuthReducer } from './reducer'
 
 const Signup = () => {
 	// Aqui el proceso de escritura
-
+	const { changeFormValues } = useAuthReducer()
 	return (
 		<>
 			<div className='box-container-signup'>
@@ -19,13 +20,13 @@ const Signup = () => {
 						<p>Registrarme</p>
 					</div>
 					<div>
-						<input type='text' placeholder='Usuario' />
+						<input type='text' placeholder='Usuario' name='userName' onChange={(e) => changeFormValues(e.target.name, e.target.value)} />
 					</div>
 					<div>
-						<input type='text' placeholder='Email' />
+						<input type='text' placeholder='Email' name='email' onChange={(e) => changeFormValues(e.target.name, e.target.value)} />
 					</div>
 					<div>
-						<input type='text' placeholder='Contraseña' />
+						<input type='text' placeholder='Contraseña' name='password' onChange={(e) => changeFormValues(e.target.name, e.target.value)} />
 					</div>
 					<div>
 						<input type='text' placeholder='Repetir contraseña' />
