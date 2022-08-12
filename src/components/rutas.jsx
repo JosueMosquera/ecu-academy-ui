@@ -6,13 +6,13 @@ import SignupScreen from '../SignupScreen';
 const Navbar = () => {
 	return (
 		<BrowserRouter>
-			<nav class='navbar navbar-expand-lg'>
-				<div class='container-fluid'>
-					<a class='navbar-brand' href='#'>
+			<nav className='navbar navbar-expand-lg'>
+				<div className='container-fluid'>
+					<a className='navbar-brand' href='#'>
 						<img width={70} src='./assets/img/logo.png' alt='' />
 					</a>
 					<button
-						class='navbar-toggler'
+						className='navbar-toggler'
 						type='button'
 						data-bs-toggle='collapse'
 						data-bs-target='#navbarNav'
@@ -20,28 +20,28 @@ const Navbar = () => {
 						aria-expanded='false'
 						aria-label='Toggle navigation'
 					>
-						<span class='navbar-toggler-icon'></span>
+						<span className='navbar-toggler-icon'></span>
 					</button>
-					<div class='collapse navbar-collapse' id='navbarNav'>
-						<ul class='navbar-nav ms-auto'>
-							<li class='nav-item'>
-								<Link class='nav-link active' aria-current='page' to='#'>
+					<div className='collapse navbar-collapse' id='navbarNav'>
+						<ul className='navbar-nav ms-auto'>
+							<li className='nav-item'>
+								<Link className='nav-link active' aria-current='page' to='#'>
 									Inicio
 								</Link>
 							</li>
-							<li class='nav-item'>
-								<Link class='nav-link' to='#'>
+							<li className='nav-item'>
+								<Link className='nav-link' to='#'>
 									Mis cursos
 								</Link>
 							</li>
-							<li class='nav-item'>
-								<Link class='nav-link' to='/singup'>
+							<li className='nav-item'>
+								<Link className='nav-link' to='/singup'>
 									Registrarme
 								</Link>
 							</li>
 
-							<li class='cerrar-sesion-btn nav-item'>
-								<Link class='nav-link' to='/login'>
+							<li className='cerrar-sesion-btn nav-item'>
+								<Link className='nav-link' to='/login'>
 									Login
 								</Link>
 							</li>

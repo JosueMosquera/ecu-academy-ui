@@ -1,9 +1,12 @@
 import '../../css/auth.css';
 import { useAuthReducer } from './reducer'
-
 const Signup = () => {
 	// Aqui el proceso de escritura
-	const { changeFormValues } = useAuthReducer()
+	const { changeFormValues, sendUserData } = useAuthReducer()
+	const handleSubmitData = (e) => {
+		e.preventDefault()
+		sendUserData()
+	}
 	return (
 		<>
 			<div className='box-container-signup'>
@@ -15,21 +18,21 @@ const Signup = () => {
 					<p>Intenta de nuevo</p>
 				</div>
 
-				<form action='' className='container-form-signup'>
+				<form className='container-form-signup' onSubmit={(e) => handleSubmitData(e)}>
 					<div className='txt'>
 						<p>Registrarme</p>
 					</div>
 					<div>
-						<input type='text' placeholder='Usuario' name='userName' onChange={(e) => changeFormValues(e.target.name, e.target.value)} />
+						<input type='text' placeholder='Usuario' name='username' onChange={(e) => changeFormValues(e.target.name, e.target.value)} />
 					</div>
 					<div>
 						<input type='text' placeholder='Email' name='email' onChange={(e) => changeFormValues(e.target.name, e.target.value)} />
 					</div>
 					<div>
-						<input type='text' placeholder='Contraseña' name='password' onChange={(e) => changeFormValues(e.target.name, e.target.value)} />
+						<input type='password' placeholder='Contraseña' name='password' onChange={(e) => changeFormValues(e.target.name, e.target.value)} />
 					</div>
 					<div>
-						<input type='text' placeholder='Repetir contraseña' />
+						<input type='password' placeholder='Repetir contraseña' />
 					</div>
 					<div className='txt'>
 						<a href='#'>Ya tengo cuenta</a>

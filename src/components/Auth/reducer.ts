@@ -1,4 +1,6 @@
 import { useReducer } from 'react'
+import axios from 'src/utils/axios'
+import Swal from 'sweetalert2'
 
 type ChangeFormValues = {
     type: 'change-form-values',
@@ -7,15 +9,16 @@ type ChangeFormValues = {
         value: any
     }
 }
+
 type ActionTypes = ChangeFormValues
 type FormValues = {
     email: string | null
-    userName: string | null
+    username: string | null
     password: string | null
 }
 const initialFormValues: FormValues = {
     email: null,
-    userName: null,
+    username: null,
     password: null
 
 }
@@ -43,6 +46,8 @@ const reducer = (state: State, action: ActionTypes) => {
 }
 export interface ReducerValue {
     changeFormValues: (field: any, value: any) => void
+    sendUserData: () => void
+    login: () => void
 }
 export const useAuthReducer = (): ReducerValue => {
     const [state, dispatch] = useReducer(reducer, initialState)
@@ -55,9 +60,37 @@ export const useAuthReducer = (): ReducerValue => {
             }
         })
     }
-    console.log(state.formValues)
+    const sendUserData = async () => {
+        const { username, password, email } = state.formValues
+        if (username && password && email !== null) {
+            try {
+                await axios.post('/users', {
+                    username,
+                    password,
+                    email
+                })
+                Swal.fire({ title: 'Felicidades te has registrado exitosamente', icon: 'success' })
+
+            } catch (error) {
+                Swal.fire({ title: 'Algo sucedio al momento de registrarte', icon: 'error' })
+                console.error(error)
+            }
+        }
+    }
+    const login = () => {
+        const { username, password } = state.formValues
+        if (username && password !== null) {
+            try {
+
+            } catch (error) {
+
+            }
+        }
+    }
     return {
         ...state,
-        changeFormValues
+        changeFormValues,
+        sendUserData,
+        login
     }
 }
