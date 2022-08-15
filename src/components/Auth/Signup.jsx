@@ -14,9 +14,9 @@ const Signup = () => {
 					<img src='./assets/img/logo.png' alt='' />
 				</div>
 
-				<div className='box-container-error'>
+				{/* <div className='box-container-error'>
 					<p>Intenta de nuevo</p>
-				</div>
+				</div> */}
 
 				<form className='container-form-signup' onSubmit={(e) => handleSubmitData(e)}>
 					<div className='txt'>

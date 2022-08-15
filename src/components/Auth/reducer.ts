@@ -76,17 +76,29 @@ export const useAuthReducer = (): ReducerValue => {
                 console.error(error)
             }
         }
-    }
-    const login = () => {
-        const { username, password } = state.formValues
-        if (username && password !== null) {
-            try {
-
-            } catch (error) {
-
-            }
+        else {
+            Swal.fire({ title: 'Ingrese datos para registrarse.', icon: 'error' })
         }
     }
+    const login = async () => {
+        const { email, password } = state.formValues
+        if (email && password !== null) {
+            try {
+                await axios.post('/auth/login', {
+                    email,
+                    password
+                })
+                Swal.fire({ title: `Bienvenido ${email}`, icon: 'success' })
+            } catch (error) {
+                Swal.fire({ title: 'Usuario o contraseña incorrectos.', icon: 'error' })
+                console.error(error)
+            }
+        }
+        else {
+            Swal.fire({ title: 'Ingrese un usuario y contraseña para logearse.', icon: 'error' })
+        }
+    }
+    console.log(state.formValues)
     return {
         ...state,
         changeFormValues,
