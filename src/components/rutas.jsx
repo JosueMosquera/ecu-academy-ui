@@ -2,6 +2,7 @@ import '../css/navBar.css';
 import { Link, BrowserRouter, Route, Routes } from 'react-router-dom';
 import LoginScreen from '../LoginScreen';
 import SignupScreen from '../SignupScreen';
+import ClasesScreen from 'src/ClasesScreen';
 
 const Navbar = () => {
 	return (
@@ -30,8 +31,8 @@ const Navbar = () => {
 								</Link>
 							</li>
 							<li className='nav-item'>
-								<Link className='nav-link' to='#'>
-									Mis cursos
+								<Link className='nav-link' to='/cursos'>
+									Cursos
 								</Link>
 							</li>
 							<li className='nav-item'>
@@ -52,6 +53,7 @@ const Navbar = () => {
 			<Routes>
 				<Route exact path='/login' element={<LoginScreen />}></Route>
 				<Route exact path='/singup' element={<SignupScreen />}></Route>
+				<Route exact path='/cursos' element={<ClasesScreen />}></Route>
 			</Routes>
 		</BrowserRouter>
 	);
