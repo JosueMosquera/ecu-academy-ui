@@ -2,7 +2,7 @@ import '../css/navBar.css';
 import { Link, BrowserRouter, Route, Routes } from 'react-router-dom';
 import LoginScreen from '../LoginScreen';
 import SignupScreen from '../SignupScreen';
-import ClasesScreen from 'src/ClasesScreen';
+import ClasesScreen from '../components/Courses/ClasesScreen';
 
 const Navbar = () => {
 	return (
