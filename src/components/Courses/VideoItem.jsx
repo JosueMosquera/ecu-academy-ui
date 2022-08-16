@@ -1,4 +1,4 @@
-import '../css/auth.css';
+import '../../css/auth.css';
 
 const VideoItem = ({ nombre, desc, img, id }) => {
 	return (
